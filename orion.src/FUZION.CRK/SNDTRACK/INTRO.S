@@ -329,7 +329,7 @@ stf_replay_routs
 	bset	#5,$fffffa07.w
 	bset	#5,$fffffa13.w
 	clr.b	$FFFFFA19.w
-	move.b	#A_DATA,$FFFFFA1F.w
+	move.b	#a_data,$FFFFFA1F.w
 	move.b	#2,$FFFFFA19.w
 	move.l	#play_stf,jmp_music+2
 	lea	out_inter,a0
@@ -642,7 +642,7 @@ ploop	move.w	#255,d1
 mloop	move.w	d1,d2
 	ext.w	d2
 	muls	d0,d2
-	divs	#MVOL,d2
+	divs	#mvol,d2
 st_ch_1	add.b	#$80,d2	
 	move.b	d2,-(a0)
 	dbra	d1,mloop
@@ -652,7 +652,7 @@ st_ch_1	add.b	#$80,d2
 incrcal	lea	stab,a0
 	move.w	#$30,d1
 	move.w	#$39F-$30,d0
-st_ch_2	move.l	#INC_stf,d2
+st_ch_2	move.l	#inc_stf,d2
 recalc	swap	d2
 	moveq	#0,d3
 	move.w	d2,d3
@@ -700,7 +700,7 @@ v1	movea.l	wiz2lc,a0
 	movea.l	samp1,a6
 add_ste_1	adda.w	#0,a6
 	moveq	#0,d3
-	REPT 	LEN_ste
+	REPT 	len_ste
 	add.w	a4,d1
 	addx.w	d2,d0
 	add.w	a5,d5
@@ -750,7 +750,7 @@ v2	movea.l	wiz1lc,a0
 	movea.l	samp1,a6
 add_ste_2	adda.w	#0,a6
 	moveq	#0,d3
-	REPT 	LEN_ste
+	REPT 	len_ste
 	add.w	a4,d1
 	addx.w	d2,d0
 	add.w	a5,d5
@@ -805,7 +805,7 @@ v1_2	movea.l	wiz1lc,a0
 	moveq	#0,d4
 	movea.l	samp1,a3
 add_stf_1	adda.w	#0,a3
-	REPT 	LEN_stf
+	REPT 	len_stf
 	add.w	d2,d0
 	addx.w	d3,d1
 	move.b	0(a0,d1.l),d4
@@ -885,7 +885,7 @@ v4	movea.l	wiz4lc,a0
 	rts
 v234	
 add_stf_2	adda.w	#0,a3
-	REPT 	LEN_stf
+	REPT 	len_stf
 	add.w	d2,d0
 	addx.w	d3,d1
 	move.b	0(a0,d1.l),d4

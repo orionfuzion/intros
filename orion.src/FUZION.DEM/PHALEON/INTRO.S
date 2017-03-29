@@ -581,7 +581,7 @@ unknow	lea	font+34+160*28*8+32*2,a1
 suite_1	lea	160*27(a1),a1
 	rts
 	
-INIT_MUZEXX
+init_muzexx
 	LEA	SAVE_INT(PC),A1
 	LEA	$FFFF8200.W,A0
 	MOVEP	$1(A0),D0

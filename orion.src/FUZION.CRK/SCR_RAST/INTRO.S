@@ -632,55 +632,55 @@ pause2	cmpi.b	#$23,d0
 	bra	sui
 plus2	cmpi.b	#$2b,d0
 	bne.s	egal2
-	lea	FONT+34+160*32*4+16*3,a0
+	lea	font+34+160*32*4+16*3,a0
 	bra	sui
 egal2	cmpi.b	#$3d,d0
 	bne.s	space2
-	lea	FONT+34+160*32*3+16*8,a0
+	lea	font+34+160*32*3+16*8,a0
 	bra	sui
 space2	cmpi.b	#$20,d0
 	bne.s	excla2
-	lea	FONT+34+160*32*4+16*3,a0
+	lea	font+34+160*32*4+16*3,a0
 	bra	sui
 excla2	cmpi.b	#$21,d0
 	bne.s	inter2
-	lea	FONT+34+160*32*3+16*6,a0
+	lea	font+34+160*32*3+16*6,a0
 	bra	sui
 inter2	cmpi.b	#$3f,d0
 	bne.s	dx_pts2
-	lea	FONT+34+160*32*3+16*9,a0
+	lea	font+34+160*32*3+16*9,a0
 	bra	sui
 dx_pts2	cmpi.b	#$3a,d0
 	bne.s	pt_virg2
-	lea	FONT+34+160*32*3+16*7,a0
+	lea	font+34+160*32*3+16*7,a0
 	bra	sui
 pt_virg2	cmpi.b	#$3b,d0
 	bne.s	virg2
-	lea	FONT+34+160*32*4+16*8,a0
+	lea	font+34+160*32*4+16*8,a0
 	bra	sui
 virg2	cmpi.b	#$2c,d0
 	bne.s	par_g2
-	lea	FONT+34+160*32*4+16*5,a0
+	lea	font+34+160*32*4+16*5,a0
 	bra	sui
 par_g2	cmpi.b	#$28,d0
 	bne.s	par_d2
-	lea	FONT+34+160*32*4+16*1,a0
+	lea	font+34+160*32*4+16*1,a0
 	bra	sui
 par_d2	cmpi.b	#$29,d0
 	bne.s	tiret2
-	lea	FONT+34+160*32*4+16*2,a0
+	lea	font+34+160*32*4+16*2,a0
 	bra	sui
 tiret2	cmpi.b	#$2d,d0
 	bne.s	pOt2
-	lea	FONT+34+160*32*4+16*6,a0
+	lea	font+34+160*32*4+16*6,a0
 	bra	sui
 pOt2	cmpi.b	#$2e,d0
 	bne.s	guill2
-	lea	FONT+34+160*32*4+16*7,a0
+	lea	font+34+160*32*4+16*7,a0
 	bra	sui
 guill2	cmpi.b	#$27,d0
 	bne.s	lettres_1
-	lea	FONT+34+160*32*4+16*0,a0
+	lea	font+34+160*32*4+16*0,a0
 	bra	sui
 lettres_1	cmpi.b	#$41,d0
 	blt.s	chiffres2
@@ -688,24 +688,24 @@ lettres_1	cmpi.b	#$41,d0
 	bge.s	lettres_2
 	subi.b	#$41,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*32*1,a0
+	lea	font+34+160*32*1,a0
 	adda.l	d0,a0
 	bra	sui
 lettres_2	cmpi.b	#$55,d0
 	bge.s	lettres_3
 	subi.b	#$4b,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*32*2,a0
+	lea	font+34+160*32*2,a0
 	adda.l	d0,a0
 	bra	sui
 lettres_3	subi.b	#$55,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*32*3,a0
+	lea	font+34+160*32*3,a0
 	adda.l	d0,a0
 	bra	sui
 chiffres2	subi.b	#$30,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*32*0,a0
+	lea	font+34+160*32*0,a0
 	adda.l	d0,a0
 sui	rts
 
@@ -774,7 +774,7 @@ scroll_2	cmpi.l	#0,stop
 	sub.l	#1,stop
 	bra	suit2
 scroll2	move.l	pt1,d0
-	lea	text,a0
+	lea	TEXT,a0
 	adda.l	d0,a0
 	moveq	#0,d0
 	move.b	(a0),d0
@@ -849,7 +849,7 @@ lettres	cmpi.b	#$41,d0
 	blt.s	chiffres
 	subi.b	#$41,d0
 	mulu	#8*10,d0
-	lea	c_a,a0
+	lea	c_A,a0
 	adda.l	d0,a0
 	bra.s	suite
 chiffres	subi.b	#$30,d0
