@@ -488,47 +488,47 @@ test	lea	text1,a0
 	bra.s	test
 space	cmpi.b	#$20,d0
 	bne.s	excla
-	lea	FONT+34+160*28*4+16*6,a0
+	lea	font+34+160*28*4+16*6,a0
 	bra	sui
 excla	cmpi.b	#$21,d0
 	bne.s	inter
-	lea	FONT+34+160*28*3+16*6,a0
+	lea	font+34+160*28*3+16*6,a0
 	bra	sui
 inter	cmpi.b	#$3f,d0
 	bne.s	dx_pts
-	lea	FONT+34+160*28*4+16*4,a0
+	lea	font+34+160*28*4+16*4,a0
 	bra	sui
 dx_pts	cmpi.b	#$3a,d0
 	bne.s	virg
-	lea	FONT+34+160*28*4+16*1,a0
+	lea	font+34+160*28*4+16*1,a0
 	bra	sui
 virg	cmpi.b	#$2c,d0
 	bne.s	pt_virg
-	lea	FONT+34+160*28*4+16*3,a0
+	lea	font+34+160*28*4+16*3,a0
 	bra	sui
 pt_virg	cmpi.b	#$3b,d0
 	bne.s	guil
-	lea	FONT+34+160*28*4+16*5,a0
+	lea	font+34+160*28*4+16*5,a0
 	bra	sui
 guil	cmpi.b	#$27,d0
 	bne.s	par_g
-	lea	FONT+34+160*28*4+16*2,a0
+	lea	font+34+160*28*4+16*2,a0
 	bra	sui
 par_g	cmpi.b	#$28,d0
 	bne.s	par_d
-	lea	FONT+34+160*28*3+16*9,a0
+	lea	font+34+160*28*3+16*9,a0
 	bra	sui
 par_d	cmpi.b	#$29,d0
 	bne.s	tiret
-	lea	FONT+34+160*28*4+16*0,a0
+	lea	font+34+160*28*4+16*0,a0
 	bra	sui
 tiret	cmpi.b	#$2d,d0
 	bne.s	pt
-	lea	FONT+34+160*28*3+16*7,a0
+	lea	font+34+160*28*3+16*7,a0
 	bra	sui
 pt	cmpi.b	#$2e,d0
 	bne.s	lettres_1
-	lea	FONT+34+160*28*3+16*8,a0
+	lea	font+34+160*28*3+16*8,a0
 	bra	sui
 lettres_1	cmpi.b	#$41,d0
 	blt.s	chiffres
@@ -536,21 +536,21 @@ lettres_1	cmpi.b	#$41,d0
 	bge.s	lettres_2
 	subi.b	#$41,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*28*1,a0
+	lea	font+34+160*28*1,a0
 	adda.l	d0,a0
 	bra	sui
 lettres_2	cmpi.b	#$55,d0
 	bge.s	lettres_3
 	subi.b	#$4b,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*28*2,a0
+	lea	font+34+160*28*2,a0
 	adda.l	d0,a0
 	bra	sui
 lettres_3	cmpi.b	#$5b,d0
 	bge.s	inconu
 	subi.b	#$55,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*28*3,a0
+	lea	font+34+160*28*3,a0
 	adda.l	d0,a0
 	bra	sui
 chiffres	cmpi.b	#$30,d0
@@ -559,10 +559,10 @@ chiffres	cmpi.b	#$30,d0
 	bgt.s	inconu
 	subi.b	#$30,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*28*0,a0
+	lea	font+34+160*28*0,a0
 	adda.l	d0,a0
 	bra	sui
-inconu	lea	FONT+34+160*28*4+16*6,a0
+inconu	lea	font+34+160*28*4+16*6,a0
 sui	rts
 
 aff_1	move.l	#26,d0
@@ -808,7 +808,7 @@ text1	DC.B	" HI BOYS AND GIRLS ....      FUZION PRESENTS YOU A NEW CD WITH  GREA
 	even
 pt_pass	dc.b	4
 	even
-pos	dc.l	FONT+34+160*28*4+16*6
+pos	dc.l	font+34+160*28*4+16*6
 pt_1	ds.l	1
 pt_line	ds.w	1
 pal_mot	dc.w	$000,$213,$324,$435

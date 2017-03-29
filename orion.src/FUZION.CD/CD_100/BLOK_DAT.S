@@ -34,7 +34,7 @@ cop1	movem.l	(a0),d3-d7/a2-a4
 	
 nom	dc.b	"blocks.dat",0
 	even
-blocks	incbin	\gaulle2.pi1
+blocks	incbin	\gaulle3.pi1
 	even
 buf	 
 	end	

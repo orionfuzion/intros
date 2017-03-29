@@ -499,6 +499,7 @@ table_sin	rept	48
 pt_sin	dc.l	0
 text	DC.B	"HI GUYS !!! ORION FROM FUZION PROUDLY PRESENTS THIS LITTLE SCREEN "
 	DC.B	"CODED ESPECIALLY FOR SYNTHESE INFORMATIQUE..... BYE....           ",0
+	even
 buffer_c	rept	40
 	dc.w	$000
 	endr

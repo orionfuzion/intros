@@ -35,7 +35,7 @@ c1	move.w	(a0)+,(a1)
 	
 nom	dc.b	"fnt_16_1.pi1",0
 	even
-fnt	incbin	16x16.fnt
+fnt	incbin	16x16_3.fnt
 buf_fnt	dc.w	0,0,$777
 	dcb.w	13,0
 	dc.w	$777

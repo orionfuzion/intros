@@ -349,43 +349,43 @@ test	lea	text1,a0
 	bra.s	test
 space	cmpi.b	#$20,d0
 	bne.s	excla
-	lea	FONT+34+160*33*4+16*0,a0
+	lea	font+34+160*33*4+16*0,a0
 	bra	sui
 excla	cmpi.b	#$21,d0
 	bne.s	inter
-	lea	FONT+34+160*33*2+16*8,a0
+	lea	font+34+160*33*2+16*8,a0
 	bra	sui
 inter	cmpi.b	#$3f,d0
 	bne.s	dx_pts
-	lea	FONT+34+160*33*2+16*9,a0
+	lea	font+34+160*33*2+16*9,a0
 	bra	sui
 dx_pts	cmpi.b	#$3a,d0
 	bne.s	virg
-	lea	FONT+34+160*33*3+16*2,a0
+	lea	font+34+160*33*3+16*2,a0
 	bra	sui
 virg	cmpi.b	#$2c,d0
 	bne.s	par_g
-	lea	FONT+34+160*33*3+16*4,a0
+	lea	font+34+160*33*3+16*4,a0
 	bra	sui
 par_g	cmpi.b	#$28,d0
 	bne.s	par_d
-	lea	FONT+34+160*33*2+16*6,a0
+	lea	font+34+160*33*2+16*6,a0
 	bra	sui
 par_d	cmpi.b	#$29,d0
 	bne.s	tiret
-	lea	FONT+34+160*33*2+16*7,a0
+	lea	font+34+160*33*2+16*7,a0
 	bra	sui
 tiret	cmpi.b	#$2d,d0
 	bne.s	pt
-	lea	FONT+34+160*33*3+16*0,a0
+	lea	font+34+160*33*3+16*0,a0
 	bra	sui
 pt	cmpi.b	#$2e,d0
 	bne.s	guill
-	lea	FONT+34+160*33*3+16*1,a0
+	lea	font+34+160*33*3+16*1,a0
 	bra	sui
 guill	cmpi.b	#$27,d0
 	bne.s	lettres_1
-	lea	FONT+34+160*33*3+16*3,a0
+	lea	font+34+160*33*3+16*3,a0
 	bra	sui
 lettres_1	cmpi.b	#$41,d0
 	blt.s	sui
@@ -393,19 +393,19 @@ lettres_1	cmpi.b	#$41,d0
 	bge.s	lettres_2
 	subi.b	#$41,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*33*0,a0
+	lea	font+34+160*33*0,a0
 	adda.l	d0,a0
 	bra	sui
 lettres_2	cmpi.b	#$55,d0
 	bge.s	lettres_3
 	subi.b	#$4b,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*33*1,a0
+	lea	font+34+160*33*1,a0
 	adda.l	d0,a0
 	bra	sui
 lettres_3	subi.b	#$55,d0
 	mulu	#$10,d0
-	lea	FONT+34+160*33*2,a0
+	lea	font+34+160*33*2,a0
 	adda.l	d0,a0
 	bra	sui
 sui	rts
@@ -823,7 +823,7 @@ text1	DC.B	"  YEAH !!!    THE DRAGON AND MAC-DOS FROM FUZION PRESENT YOU THE SOU
 	DC.B	0
 pt_pass	dc.b	4
 	even
-pos	dc.l	FONT+34+160*33*4+16*0
+pos	dc.l	font+34+160*33*4+16*0
 	even
 pt_1	ds.l	1
 pt_col	ds.l	1	
